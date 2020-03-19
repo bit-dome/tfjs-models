@@ -156,6 +156,7 @@ export class HandPipeline {
   }
 
   async estimateHand(image: tf.Tensor4D): Promise<Prediction> {
+    console.log('hello');
     const useFreshBox = this.shouldUpdateRegionsOfInterest();
     if (useFreshBox === true) {
       const boundingBoxPrediction =
